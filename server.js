@@ -20,6 +20,11 @@ app.get('/', (req,res)=>{
 app.use("/api", userRouter)
 app.use("/auth", authRouter)
 
+// Error Handling
+app.use((error, req, res, next)=>{
+  res.status(error.code || 500).json({message: error.message || "Something Wrong"})
+})
+
 const PORT = 8888
 //Start Server
 app.listen(PORT,()=>console.log(`server is running on port http://localhost:${PORT}`))

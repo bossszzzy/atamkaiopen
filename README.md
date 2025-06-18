@@ -10,3 +10,11 @@ npm install express
 ```bash
 npm install cors morgan nodemon
 ```
+
+## Git
+```bash
+git init(เฉพาะครั้งแรก)
+git add .
+git commit -m "message"
+git push
+```
